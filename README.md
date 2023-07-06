@@ -1,4 +1,4 @@
-# LaravelOdoo
+# Ladoo
 
 Odoo ERP API for Laravel. [Odoo website](https://www.odoo.com)
 
@@ -10,14 +10,14 @@ Odoo ERP API for Laravel. [Odoo website](https://www.odoo.com)
 type in console:
 
 ```shel
-composer require adapt-it/laravelodoo
+composer require divyeshjesadiya/ladoo
 ```
 
 Register LaravelOdoo service by adding it to the providers array.
 ```php
 'providers' => array(
         ...
-        AdaptIT\LaravelOdoo\Providers\OdooServiceProvider::class
+        DivyeshJesadiya\Ladoo\Providers\OdooServiceProvider::class
     )
 ```
 
@@ -25,14 +25,14 @@ Let's add the Alias facade, add it to the aliases array.
 ```php
 'aliases' => array(
         ...
-        'Odoo' => AdaptIT\LaravelOdoo\Facades\Odoo::class,
+        'Odoo' => DivyeshJesadiya\Ladoo\Facades\Odoo::class,
     )
 ```
     
 Publish the package's configuration file to the application's own config directory
 
 ```php
-php artisan vendor:publish --provider="AdaptIT\LaravelOdoo\Providers\OdooServiceProvider" --tag="config"
+php artisan vendor:publish --provider="DivyeshJesadiya\Ladoo\Providers\OdooServiceProvider" --tag="config"
 ```
 
 ### Configuration
@@ -50,7 +50,7 @@ Also, you can dynamically update those values calling the available setter metho
 Instance the main Odoo class:
 
 ```php
-$odoo = new \AdaptIT\LaravelOdoo\Odoo();
+$odoo = new \DivyeshJesadiya\Ladoo\Odoo();
 ```
 You can get the Odoo API version just calling the version method:
 
